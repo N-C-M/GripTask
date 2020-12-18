@@ -21,8 +21,15 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  flutter_facebook_login: ^3.0.0
+  http:
   flutter:
     sdk: flutter
+  firebase_core: "^0.5.3"
+  firebase_auth: "^0.18.4"
+  
+  google_sign_in: "^4.5.1"
+
   
 
 
@@ -34,6 +41,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "939183459600",
+    "project_id": "griptask-78332",
+    "storage_bucket": "griptask-78332.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939183459600:android:e1617601004321b4f6e995",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939183459600-ui45hi58j1gpnfefpnld6ds6hk4op7uq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0HVJhSskLDkHJ0yx2wufBmkyz0AAfd6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939183459600-ui45hi58j1gpnfefpnld6ds6hk4op7uq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
