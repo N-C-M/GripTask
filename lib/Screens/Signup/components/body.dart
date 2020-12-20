@@ -3,6 +3,8 @@ import 'package:flutter_app/Screens/Login/login_screen.dart';
 import 'package:flutter_app/Screens/Signup/components/background.dart';
 import 'package:flutter_app/Screens/Signup/components/or_divider.dart';
 import 'package:flutter_app/Screens/Signup/components/social_icon.dart';
+import 'package:flutter_app/Screens/gsign/login_page.dart';
+
 import 'package:flutter_app/components/already_have_an_account_acheck.dart';
 import 'package:flutter_app/components/rounded_button.dart';
 import 'package:flutter_app/components/rounded_input_field.dart';
@@ -11,9 +13,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as JSON;
-import 'package:flutter_app/social_auth.dart';
-import 'package:flutter_app/profile.dart';
 import 'package:flutter_app/global.dart';
+import 'package:flutter_app/constants.dart';
 
 
 class Body extends StatefulWidget {
@@ -23,7 +24,6 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   bool _isLoggedIn = false;
-
   final facebookLogin = FacebookLogin();
 
   _loginWithFB() async {
@@ -40,7 +40,6 @@ class _BodyState extends State<Body> {
           userProfile = profile;
           _isLoggedIn = true;
         });
-
         Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -49,7 +48,6 @@ class _BodyState extends State<Body> {
                     },
                   ),
                 );
-     
         break;
 
       case FacebookLoginStatus.cancelledByUser:
@@ -78,7 +76,7 @@ class _BodyState extends State<Body> {
           children: <Widget>[
             SizedBox(height: size.height * 0.03),
             Text(
-              'SIGNUP',
+              "SIGNUP",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
             SizedBox(height: size.height * 0.03),
@@ -119,9 +117,6 @@ class _BodyState extends State<Body> {
                   iconSrc: "assets/icons/facebook.svg",
                   press: () {
                     _loginWithFB();
-
-                    
-                    
                   },
                 ),
                 SocalIcon(
@@ -130,9 +125,15 @@ class _BodyState extends State<Body> {
                 ),
                 SocalIcon(
                   iconSrc: "assets/icons/google-plus.svg",
-                  press: () async{
-                    await signInGoogle();
-
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return LoginPage();
+                        },
+                      ),
+                    );
                   },
                 ),
               ],
@@ -144,15 +145,8 @@ class _BodyState extends State<Body> {
   }
 }
 
-/*class ProfileScreen extends StatelessWidget {
-  
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Text(userProfile["name"]),
-    );
-  }
-}*/
+
+
 class ProfileScreen extends StatelessWidget {
   
   void _showDialog(BuildContext context, {String title, String msg}) {
@@ -184,12 +178,18 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:<Widget>[
+
+            Text('Welcome',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
             
-            Image.network(userProfile["picture"]["data"]["url"], height: 100.0, width: 100.0,),
+            Image.network(userProfile["picture"]["data"]["url"], height: 100, width: 100,),
             
             
                 
-            Text(userProfile["name"]),
+            Text(userProfile["name"],
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 21),
+            ),
             SizedBox(
               height: 50,
               width: 200,
@@ -215,8 +215,8 @@ class ProfileScreen extends StatelessWidget {
             ),*/
 
             RaisedButton(
-              padding: EdgeInsets.all(8),
-              color: Colors.blueGrey,
+              padding: EdgeInsets.all(10),
+              color: kPrimaryColor,
               child: const Text('Sign Out', style: TextStyle( color: Colors.white)),
               onPressed: (){
                     Navigator.pushReplacement(
@@ -253,15 +253,17 @@ class InfoCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Card(
-        color: Colors.white60,
+             color: kPrimaryLightColor,
+
         margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
         child: ListTile(
           leading: Icon(
             icon,
-            color: Colors.blueGrey,
+            color: kPrimaryColor,
           ),
           title: Text(
             text,
+            style: TextStyle( color: kPrimaryColor)
             //style: GoogleFonts.sourceSansPro(fontSize: 20, color: Colors.blueGrey),
           ),
         ),

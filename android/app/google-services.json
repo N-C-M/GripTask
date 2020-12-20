@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "939183459600",
-    "project_id": "griptask-78332",
-    "storage_bucket": "griptask-78332.appspot.com"
+    "project_number": "787961185432",
+    "project_id": "grip-f8780",
+    "storage_bucket": "grip-f8780.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:939183459600:android:e1617601004321b4f6e995",
+        "mobilesdk_app_id": "1:787961185432:android:6ea86a10c90dd6a0b77ced",
         "android_client_info": {
           "package_name": "com.example.flutter_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "939183459600-ui45hi58j1gpnfefpnld6ds6hk4op7uq.apps.googleusercontent.com",
+          "client_id": "787961185432-tj0so4lurj0ifvtedl08956r9p1peggq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_app",
+            "certificate_hash": "944636bbdcdaa8730749fd920188a053e4584cd6"
+          }
+        },
+        {
+          "client_id": "787961185432-mh98sr4j4il4kckklf4btv3e3d1qi406.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB0HVJhSskLDkHJ0yx2wufBmkyz0AAfd6k"
+          "current_key": "AIzaSyDVshQKRSXQMH7hiT6BZTrq1XOvwknI9jA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "939183459600-ui45hi58j1gpnfefpnld6ds6hk4op7uq.apps.googleusercontent.com",
+              "client_id": "787961185432-mh98sr4j4il4kckklf4btv3e3d1qi406.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
